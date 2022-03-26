@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+header {
+    background-color: #5865F2;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+header .menu {
+    display: flex;
+    padding: 25px;
+}
+
+header .menu .item .simple_link {
+    color:white;
+    transition: all 0.3s ease;
+}
+
+header .icon {
+    display: flex;
+}
+
+header .icon .item {
+    margin: 0 10px;
+    cursor: pointer;
+    color: rgb(158, 158, 158);
+}
+
+header .icon .item:hover {
+    color: white;
+    transition: all 0.5s ease;
+}
+
+header .icon .item:not(:hover) {
+    color: rgb(158, 158, 158);
+    transition: all 0.5s ease;
+} 
+
+header .menu .item {
+    margin: 0 10px;
+    position: relative
+}
+
+header .menu .item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    transform: translateX(50%);
+    transition: all 0.3s ease;
+    background-color: black;
+}
+
+header .menu .item:hover::after {
+    width: 100%;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    transform: translateX(0);
+}
+
+header .login_btn {
+    background-color: rgb(66, 56, 255);
+    border: none;
+    border-radius: 20px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+header .login_btn:hover {
+    color: yellow;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+header .logo {
+    max-width: 10%;
+}
+
+footer {
+    background-color: #24262b;
+    padding-bottom: 30px;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: auto
+}
+
+footer .container .row {
+    display: flex;
+    flex-wrap: wrap
+}
+
+footer .container .row .item {
+    width: 25%;
+    padding-top: 30px;
+    padding-bottom: 5px
+}
+
+footer .container .row .item h4 {
+    font-size: 20px;
+    color: rgb(0, 21, 255);
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+footer .container .row .item ul li a {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #bbbbbb;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+footer .container .row .item ul li a:hover {
+    padding-left: 10px;
+    color: #ff00ea;
+    font-size: 25px;
+}
+
+footer .end .logo {
+    max-width: 15%;
+    padding-right: auto;
+}
+
+footer .open_btn {
+    margin-left: 70%;
+}
+
+footer .end {
+    display: flex;
+}
+
+.download_btn {
+    background-color: rgb(17, 178, 215);
+    border: none;
+    border-radius: 20px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.download_btn:hover {
+    background-color: #4CAF50;
+    color: blue;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.open_btn {
+    background-color: rgb(215, 136, 17);
+    border: none;
+    border-radius: 20px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    margin-left: 1%
+}
+
+.open_btn:hover {
+    background-color: #88ff00;
+    color: darksalmon;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+main {
+    justify-content: center;
+    text-align: center;
+}
+
+main .about_container {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+main .about_container {
+    padding-bottom: 10%;
+    background-color: #5865F2;
+}
+
+main .about_container h1 {
+    text-align: center;
+    padding-top: 100px;
+}
+
+main .about_container p {
+    text-align: center;
+    padding-top: 1.5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 1.5%;
+}
+
+main .about_container span {
+    opacity: 0.4;
+}
+
+main .content_container .heading h1 {
+    /* max-width: 50%; */
+    padding: 75px 15%;
+    font-size: 35px;
+}
+
+main .end_container {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 75px;
+    background-color: white;
+}
+
+main .end_container h1 {
+    padding: 75px 15% 40px;
+    font-size: 35px;
+}
+
+main .end_container .getstart_btn {
+    background-color: #3377FF;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+main .end_container .getstart_btn:hover {
+    background-color: #ff00e1;
+    color: blue;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+main .end_container .contact_btn {
+    background-color: #ffffff;
+    border: 1px solid #3377FF;
+    border-radius: 20px;
+    color: white;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    margin: 20px;
+}
+
+main .end_container .contact_btn:hover {
+    background-color: #00ff00;
+    color: blue;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+main {
+    padding: 0;
+    margin: 0;
+    /* background-image: url(https://preview.redd.it/4zh2hgl46cp51.png?width=3325&format=png&auto=webp&s=b9123bff12e1d5b86248d27a059104b4c92e05b5); */
+}
+
+main .about_container {
+    padding-bottom: 10%;
+    background-color: #5865F2;
+}
+
+main h1 {
+    text-align: center;
+    padding-top: 100px;
+}
+
+main p {
+    text-align: center;
+    padding-top: 1.5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 1.5%;
+}
+
+main .end_container {
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    padding-bottom: 5%
+}
+
+main .end_container .download_btn {
+    margin-top: 30px;
+}
+
+main .examples_container .secondExample img {
+    margin-left: auto;
+}
+
+main .examples_container img {
+    border-radius: 30px;
+}
+
+main .examples_container .fourthExample img  {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main .examples_container {
+    background-color: white;
+}
+
+main .examples_container .secondExample,
+main .examples_container .fourthExample {
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+main .examples_container .secondExample {
+    background-color: rgb(238, 238, 238);
+}
+
+main .examples_container .firstExample {
+    padding-bottom: 25px;
+}
+
+main .examples_container .firstExample .content_container .contents {
+    text-align: right;
+}
+
+main .examples_container .firstExample .content_container .contents h2 {
+    text-align: center;
+}
+
+main .examples_container .firstExample .content_container,
+main .examples_container .thirdExample {
+    padding-top: 50px;
+    padding-right: 100px;
+    padding-left: 150px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+main .examples_container .secondExample .contents {
+    text-align: left;
+}
+
+main .examples_container .secondExample {
+    padding-top: 50px;
+    padding-right: 100px;
+    padding-left: 150px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
